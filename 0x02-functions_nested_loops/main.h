@@ -1,8 +1,8 @@
-#ifndef _PUTCHAR_H
-#define _PUTCHAR_H
+#ifndef MAIN_H
+#define MAIN_H
 
 /*
- * File: _putchar.h
+ * File: _main.h
  * Desc: Header file containing declarations for all functions
  * used in the 0x02-functions_nested_loops directory.
  */
