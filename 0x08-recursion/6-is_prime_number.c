@@ -25,7 +25,7 @@ int is_prime(int n, int k)
  * @n: Number to be checked
  * Return: 0 or 1
  */
-int_is_prime_number(int n)
+int is_prime_number(int n)
 {
 if (n < 2)
 {
