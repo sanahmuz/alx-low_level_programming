@@ -1,9 +1,9 @@
 #include "main.h"
 /**
- * _strspn - Checks characters in first segment of sting
- * @s: string to be checked
- * @accept: string to be checked against
- * Return: no. of matching chars
+ * _strspn - Checks chars in the 1st segment of a string
+ * @s: String to be checked
+ * @accept: String to be checked against
+ * Return: Number of matching chars
  */
 unsigned int _strspn(char *s, char *accept)
 {
@@ -15,7 +15,7 @@ for (j = 0; accept[j]; j++)
 if (s[i] == accept[j])
 break;
 }
-if (!accpet[j])
+if (!accept[j])
 break;
 }
 return (i);
