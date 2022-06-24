@@ -1,47 +1,50 @@
 #include "main.h"
+
 /**
- * _strlen_recursion - Returns the length of a string
- * @s: String to be checked
- * Return: length of string
+ * _strlen_recursion - size
+ * @s: pointer to string params
+ * Return: recursion
  */
+
 int _strlen_recursion(char *s)
 {
-if (*s != '\0')
-{
-return (1 + _strlen_recursion(s + 1));
-}
-return (0);
+	if (!*s)
+	{
+		return (0);
+	}
+	return (1 + _strlen_recursion(++s));
 }
 
 /**
- * _check_palindrome - Checks if a string is a palindrome
- * @r: Right index
- * @l: Left index
- * @p: String being checked
- * Return: 1 or 0
+ * p1 - palindrome
+ * @s: pointer to string
+ * @l: position
+ * Return: boolena
  */
-int _check_palindrome(int r, int l, char *p)
+
+int p1(char *s, int l)
 {
-if (l >= r)
-{
-return (1);
+	if (l < 1)
+	{
+		return (1);
+	}
+
+	if (*s == *(s + l))
+	{
+		return (p1(s + 1, l - 2));
+	}
+	return (0);
 }
-else if (p[1] != p[r])
-{
-return (0);
-}
-else
-{
-return (_check_palindrome(r - 1, 1 + 1, p));
-}
-}
+
 /**
- * is_palindrome - Check if string is palindrome
- * @s: string to be checked
- * Return: 0 or 1
+ * is_palindrome - palindrome
+ * @s: pointer to string
+ * Return: recursion
  */
+
 int is_palindrome(char *s)
 {
-int i = _strlen_recursion(s) - 1;
-return (_check_palindrome(i, 0, s));
+	int len = _strlen_recursion(s);
+
+	return (p1(s, len - 1));
 }
